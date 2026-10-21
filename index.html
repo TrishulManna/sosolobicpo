@@ -51,6 +51,7 @@ section{padding-block:clamp(56px,9vw,112px)}
 .balk nav a{color:var(--bos-tekst);text-decoration:none;font-size:.95rem}
 .balk nav a:hover{color:var(--zand)}
 .balk .knop{padding:9px 18px;font-size:.9rem}
+#waar{border-top:1px solid var(--bos-lijn)}
 @media (max-width:760px){.balk nav{display:none}.balk .knop{margin-left:auto}}
 
 /* hero */
@@ -80,6 +81,13 @@ section{padding-block:clamp(56px,9vw,112px)}
 /* binding */
 .drie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:44px}
 .drie article{border-top:2px solid var(--terra);padding-top:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:36px}
+.team article{border-top:2px solid var(--terra);padding-top:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.team .tl{height:60px;display:flex;align-items:flex-end}
+@media (max-width:900px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.team{grid-template-columns:1fr}.team .tl:empty{display:none}}
+.bos .drie article{border-color:var(--perzik)}.bos .drie .nr{color:var(--perzik)}
+.bos .check li{border-color:var(--bos-lijn)}.bos .check svg circle,.bos .check svg path{stroke:var(--perzik)}
 .drie .nr{font-family:var(--display);color:var(--terra);font-weight:600}
 @media (max-width:800px){.drie{grid-template-columns:1fr}}
 
@@ -108,7 +116,7 @@ section{padding-block:clamp(56px,9vw,112px)}
 
 .plannen{display:grid;grid-template-columns:minmax(0,1820fr) minmax(0,1160fr) minmax(0,1890fr);column-gap:24px;row-gap:10px;align-items:start;margin-top:36px}
 .plannen img{width:100%;height:auto}
-@media (max-width:760px){.plannen{grid-template-columns:1fr}.p1{order:1}.c1{order:2}.p2{order:3;max-width:64%}.c2{order:4}.p3{order:5}.c3{order:6}.plannen img{margin-top:0!important}}
+@media (max-width:760px){.plannen{grid-template-columns:1fr;row-gap:6px}.p1{order:1}.c1{order:2}.p2{order:3}.c2{order:4}.p3{order:5}.c3{order:6}.plannen img{margin-top:0!important;max-width:none}.plannen .p1{margin-left:4.71%;width:95.29%}.plannen .p2{margin-left:23.26%;width:60.74%}.plannen .p3{margin-left:0;width:98.95%}.plannen .c1,.plannen .c2,.plannen .c3{padding-left:32%!important;margin-bottom:22px}}
 /* hoe */
 details+details{margin-top:14px}
 .kw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px}
@@ -121,14 +129,46 @@ details+details{margin-top:14px}
 @media (max-width:760px){.bedragen{grid-template-columns:1fr}}
 details{margin-top:36px;background:var(--wit);border:1px solid var(--lijn);border-radius:14px;padding:4px 22px}
 summary{cursor:pointer;font-weight:700;color:var(--inkt);padding-block:16px}
+.vb{display:flex;flex-direction:column;gap:14px;padding:6px 0 22px}
+.vb p{margin:0}
+.vb .totaal{font-family:var(--display);font-weight:600;font-size:clamp(2.6rem,6vw,4rem);color:var(--terra);line-height:1;font-variant-numeric:tabular-nums}
+.verdeling{display:flex;height:16px;border-radius:5px;overflow:hidden;margin-top:-6px}
+.verdeling span:first-child{background:var(--perzik)}.verdeling span:last-child{background:var(--bos)}
+.posten{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:22px 32px}
+.posten>div{border-top:5px solid var(--lijn);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.posten .label{color:var(--tekst)}
+.posten .p-inleg{border-color:var(--perzik)}.posten .p-hyp{border-color:var(--bos)}.posten .p-erf{border-color:#B9AE9C}
+.posten b{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--inkt);line-height:1.1;font-variant-numeric:tabular-nums}
+.voetnoot{border-top:1px solid var(--lijn);padding-top:12px}
+.lagen{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.laag{border:1px solid var(--lijn);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.laag ul{margin:0;padding-left:20px}
+.laag-basis{background:var(--bos);color:var(--bos-tekst);border-color:var(--bos)}.laag-basis h3{color:var(--zand)}.laag-basis .label{color:var(--perzik)}
+@media (max-width:760px){.lagen{grid-template-columns:1fr}}
+.maten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 28px}
+.maat{border-top:4px solid var(--terra);padding-top:8px}
+.maat .m2{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--terra);margin:0 0 4px}
+.maat .r{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--lijn);padding:7px 0;font-size:.92rem}
+.maat .r b{font-family:var(--display);color:var(--inkt);text-align:right;font-variant-numeric:tabular-nums}.maat .r b.duo{color:var(--terra)}
+@media (max-width:760px){.maten{grid-template-columns:1fr}}
 .rij{display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:8px 28px;border-top:1px solid var(--lijn);padding-block:14px}
 .rij b{font-family:var(--display);color:var(--terra);font-weight:600;font-size:1.15rem;font-variant-numeric:tabular-nums}
 .groepkop{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-top:14px}
 @media (max-width:600px){.rij{grid-template-columns:1fr}}
-.tijdlijn{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.gedaan{margin-top:32px;display:flex;flex-direction:column;gap:8px;color:var(--inkt)}
+.gedaan p{margin:0}.gedaan .label{color:var(--grijs)}
+.gedaan p:not(.label){display:flex;align-items:baseline}
+.gedaan .vink{flex:none}
+.gedaan .vink{display:inline-grid;place-items:center;width:1.4em;height:1.4em;border-radius:50%;background:var(--bos);color:var(--zand);font-size:.8em;font-weight:700;margin-right:10px;vertical-align:.05em}
+.tijdlijn{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
 .tijdlijn li{border-top:5px solid var(--bos);padding-top:14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tijdlijn li>p:not(.betaal){margin-bottom:10px}
+@media (min-width:901px){.tijdlijn li>p:not(.betaal){min-height:3.1em}}
 .tijdlijn li:first-child{border-color:var(--terra)}
+.tijdlijn li:first-child .wanneer{color:var(--terra)}
 .tijdlijn .wanneer{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grijs)}
+.tijdlijn .betaal{padding-top:10px;border-top:1px solid var(--lijn);color:var(--terra);font-size:.9rem;line-height:1.5}
+.tijdlijn .betaal span{display:block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .tijdlijn h3{font-size:1.15rem}
 .tijdlijn p{font-size:.92rem}
 @media (max-width:900px){.tijdlijn{grid-template-columns:1fr 1fr}}
@@ -152,7 +192,7 @@ footer p{max-width:62rem}
   <div class="wrap">
     <a href="#top" aria-label="Naar boven"><img src="img/logo_light.png" alt="SoSo Lobi"></a>
     <nav aria-label="Hoofdstukken">
-      <a href="#wie">Wie?</a><a href="#waar">Waar?</a><a href="#wat">Wat?</a><a href="#hoe">Hoe?</a>
+      <a href="#waar">Waar?</a><a href="#wat">Wat?</a><a href="#wensen">Wie?</a><a href="#hoe">Hoe?</a><a href="#wanneer">Wanneer?</a>
     </nav>
     <a class="knop" href="#doemee">Doe mee</a>
   </div>
@@ -168,72 +208,33 @@ footer p{max-width:62rem}
         <p class="sub">Negen houten woningen, zelf ingedeeld en samen gebouwd.</p>
         <div class="acties">
           <a class="knop" href="#doemee">We zoeken nog leden</a>
-          <a class="knop licht" href="#wie">Past dit bij jou?</a>
+          <a class="knop licht" href="#past">Past dit bij jou?</a>
         </div>
       </div>
       <figure><img src="img/gevel.jpg" alt="Sfeerimpressie: een houten woongebouw van vier lagen met veranda's vol groen, aan de rand van het park" width="1396" height="986"></figure>
     </div>
   </section>
 
-  <section id="wie">
-    <div class="wrap">
-      <div class="kop">
-        <p class="label">1 · Wie? <span class="pil">Nu</span></p>
-        <h2>Met wie gaan we dit aan? Met jou.</h2>
-        <p class="lead">Hoe eerder je instapt, hoe meer je kiest.</p>
-      </div>
-      <h3 style="margin-top:44px;margin-bottom:12px;color:var(--terra)">Past dit bij jou?</h3>
-      <ul class="check">
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je wilt hier wonen en een gemeenschap mee opbouwen, niet alleen een woning kopen.</li>
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je maakt de komende jaren tijd voor ontwerpsessies, ledenvergaderingen en een werkgroep.</li>
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je kunt de inleg van € 25.000 opbrengen en je woning financieren.</li>
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je besluit samen, ook als het niet jouw voorkeur wordt.</li>
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je hebt een lange adem: tot de oplevering duurt het nog een paar jaar.</li>
-        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je wilt de tuin, het dakterras en de gemeenschappelijke keuken mee delen en onderhouden.</li>
-      </ul>
 
-      <div class="kop" style="margin-top:96px">
-        <h2>Ruimte voor jouw woonwensen.</h2>
-      </div>
-      <div class="wolken">
-        <p class="wolk" style="--staart:84%">“Ik wil opstaan met de ochtendzon en dineren met de avondzon.”</p>
-        <p class="wolk" style="--staart:70%">“Na een rondje door het park neem ik thuis uitgebreid een bad.”</p>
-        <p class="wolk" style="--staart:50%">“Kan ik extra opbergruimte in mijn woning krijgen?”</p>
-        <p class="wolk" style="--staart:30%">“Ik wil een open woning zoals een loft, met zo min mogelijk wanden.”</p>
-        <p class="wolk" style="--staart:16%">“Mijn woonkamer wordt een op maat gemaakte luisterkamer, kijkend naar het park.”</p>
-      </div>
-      <img class="groep" src="img/groep.png" alt="Illustratie van vijf voorbeeldbewoners" width="994" height="414">
-      <p class="klein" style="text-align:center;margin-top:8px">Illustratie: voorbeeldbewoners</p>
 
-      <div class="kop" style="margin-top:96px">
-        <h2>Wat ons bindt</h2>
-<p style="font-family:var(--display);font-weight:600;font-size:1.4rem;color:var(--terra)">SoSo Lobi betekent ‘alleen maar liefde’.</p>
-        <p class="lead">Ieder krijgt een eigen woning. Het gebouw maken we samen. Dit verbindt ons.</p>
-      </div>
-      <div class="drie">
-        <article><span class="nr">01</span><h3>Geworteld in Zuidoost</h3><p>SoSo Lobi is ontstaan uit een sterke band met Amsterdam Zuidoost. We willen hier blijven, omdat we de kracht en kwaliteiten van dit stadsdeel zien.</p></article>
-        <article><span class="nr">02</span><h3>Ruimte die we delen</h3><p>Een tuin, dakterras en gemeenschappelijke keuken als verlengstuk van je woning. Handig voor een kookpartij voor een grote groep, een feest of als je klein woont. Buurtgenoten kunnen de ruimtes ook reserveren.</p></article>
-        <article><span class="nr">03</span><h3>Samen opdrachtgever</h3><p>We bouwen zelf, zonder ontwikkelaar. Samen beslissen we over het gebouw, ieder over de eigen woning.</p></article>
-      </div>
-    </div>
-  </section>
+
 
   <section id="waar" class="bos">
     <div class="wrap">
       <div class="waar">
         <img src="img/park.jpg" alt="Plankaart van het Nelson Mandelapark met de nieuwe buurt; kavel A2 is rood gemarkeerd aan de parkzijde" width="1800" height="1259">
         <div class="tekst">
-          <p class="label">2 · Waar? <span class="pil">Geregeld</span></p>
+          <p class="label">1 · Waar?</p>
           <h2>Het park is je voortuin</h2>
           <p class="lead">Kavel A2 (rood) ligt direct aan het Nelson Mandelapark, in een buurt die bijna helemaal in hout wordt gebouwd.</p>
-          <p>Amsterdam Zuidoost is volgens bewoners het groenste stadsdeel. Bussen stoppen aan de rand van het park. Trein en metro (Bijlmer ArenA, Kraaiennest, Bullewijk) liggen op ± 6 minuten fietsen. De buurt is autoluw: er komen geen parkeerplaatsen voor bewoners. Wel komen er in de buurt plekken voor deelauto’s, en je fiets stal je in het gebouw.</p>
+          <p>Amsterdam Zuidoost is volgens bewoners het groenste stadsdeel. Bussen stoppen aan de rand van het park. Trein en metro (Bijlmer ArenA, Kraaiennest, Bullewijk) liggen op ± 6 minuten fietsen. De buurt is autoluw: er komen plekken voor deelauto’s in de buurt en je fiets stal je in het gebouw. Een eigen parkeerplaats krijg je niet.</p>
           <p class="links"><a href="https://www.google.com/maps?q=52.31555,4.96256">Bekijk de plek op Google Maps →</a><a href="https://www.amsterdam.nl/projecten/bouwprojecten-verkeersprojecten-zuidoost/">Alle bouwprojecten in Zuidoost →</a></p>
         </div>
       </div>
 
       <div class="kop" style="margin-top:96px">
         <h2>Groen, levendig en in volle groei</h2>
-        <p class="lead">Wie Zuidoost kent van de verhalen van toen, kent het niet meer. Rond het Nelson Mandelapark groeit een groene, gemengde en levendige buurt.</p>
+        <p class="lead">Rond het Nelson Mandelapark groeit een groene, gemengde en levendige buurt.</p>
       </div>
       <div class="cijfers">
         <div><b>32 ha</b>Nelson Mandelapark</div>
@@ -254,11 +255,11 @@ footer p{max-width:62rem}
   <section id="wat">
     <div class="wrap wat">
       <div class="tekst">
-        <p class="label">3 · Wat? <span class="pil">2027</span></p>
+        <p class="label">2 · Wat?</p>
         <p class="voor">De eerste structuurschets is gemaakt.</p>
         <h2>Nu bepaal jij de indeling.</h2>
-        <p>Een houten casco met vrije indeling. Doorzon- of hoekwoningen van 40 tot 100&nbsp;m², met een veranda aan het park. We streven naar een duurzaam, energiezuinig casco dat lang meegaat: minimaal 65% biobased draagconstructie en 30 punten natuurinclusief bouwen.</p>
-        <p>Samen delen we een tuin, dakterras en gemeenschappelijke keuken.</p>
+        <p>Een houten casco met vrije indeling. Doorzon- of hoekwoningen van 40 tot 100&nbsp;m², met een veranda aan het park en een lift. We streven naar energielabel A+++: een zeer zuinige woning. De draagconstructie is voor minimaal 65% biobased, vooral hout. En er komt ruimte voor planten en dieren, met nestkasten, klimgroen en een groen dak.</p>
+        <p>Bij het gebouw horen een gemeenschappelijke tuin, dakterras en keuken.</p>
       </div>
       <figure>
         <img src="img/axo.jpg" alt="Opengewerkte tekening van het houten gebouw met CLT- en glulamconstructie, biobased isolatie, houten gevel, waterretentie op het dak, nestkasten, klimgroen en de veranda" width="1800" height="1187">
@@ -267,10 +268,11 @@ footer p{max-width:62rem}
     </div>
   </section>
 
+
   <section id="delen" style="padding-top:0">
     <div class="wrap">
       <div class="kop"><h2>Van tuin tot dak</h2>
-<p style="font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5">Het gezamenlijke deel is geschetst, maar je denkt er nog over mee. Je eigen woning deel je helemaal zelf in.</p></div>
+<p style="font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5">Het gezamenlijke deel is geschetst, maar je denkt er nog over mee. Je eigen woning deel je zelf in, binnen de constructie en de gevel.</p></div>
       <div class="plannen">
         <img class="p1" src="img/plan_bg_zand.jpg" alt="Schets begane grond: entree, fietsenstalling voor ca. 32 fietsen, gezamenlijke keuken en tuin, en privétuin" width="1820" height="1255" style="margin-top:5.77%">
         <img class="p2" src="img/plan_verd_zand.jpg" alt="Schets verdieping: lege vloer met kern, kolommen, veranda aan het park en balkons aan de tuinzijde, vrij in te delen" width="981" height="1287">
@@ -283,59 +285,135 @@ footer p{max-width:62rem}
     </div>
   </section>
 
-  <section id="hoe" style="padding-top:0">
+  <section id="wensen" style="padding-top:0">
     <div class="wrap">
       <div class="kop">
-        <p class="label">4 · Hoe? <span class="pil">2028–2029</span></p>
+        <p class="label">3 · Wie?</p>
+        <h2>Ruimte voor jouw woonwensen.</h2>
+      </div>
+      <div class="wolken">
+        <p class="wolk" style="--staart:84%">“Ik wil opstaan met de ochtendzon en dineren met de avondzon.”</p>
+        <p class="wolk" style="--staart:70%">“Mijn moeder woont straks naast ons, met een eigen voordeur.”</p>
+        <p class="wolk" style="--staart:50%">“Een slaapkamer zonder buren die langs mijn raam lopen.”</p>
+        <p class="wolk" style="--staart:30%">“Ik wil een open woning zoals een loft, met zo min mogelijk wanden.”</p>
+        <p class="wolk" style="--staart:16%">“Samen met mijn broer een woning, ieder met een eigen deel.”</p>
+      </div>
+      <img class="groep" src="img/groep.png" alt="Illustratie van vijf voorbeeldbewoners" width="994" height="414">
+      <p class="klein" style="text-align:center;margin-top:8px">Illustratie: voorbeeldbewoners</p>
+
+    </div>
+  </section>
+
+  <section id="wie" class="bos">
+    <div class="wrap">
+      <div class="kop" style="margin-top:24px">
+        <h2>Wat ons bindt</h2>
+<p style="font-family:var(--display);font-weight:600;font-size:1.4rem;color:var(--perzik)">SoSo Lobi betekent ‘alleen maar liefde’.</p>
+        <p class="lead">Ieder krijgt een eigen woning. Met negen huishoudens ken je iedereen en blijven besluiten overzichtelijk.</p>
+      </div>
+      <div class="drie">
+        <article><span class="nr">01</span><h3>Geworteld in Zuidoost</h3><p>SoSo Lobi is ontstaan uit een sterke band met Amsterdam Zuidoost. We willen hier blijven, omdat we de kracht en kwaliteiten van dit stadsdeel zien.</p></article>
+        <article><span class="nr">02</span><h3>Extra ruimte</h3><p>Je eigen woning is compleet, met eigen keuken en badkamer. Een gemeenschappelijke tuin, dakterras en keuken heb je er als extra bij, voor een feest of als je klein woont. Buurtgenoten kunnen de ruimtes ook reserveren.</p></article>
+        <article><span class="nr">03</span><h3>Samen opdrachtgever</h3><p>We zijn zelf opdrachtgever, zonder ontwikkelaar. Over het gebouw beslissen we samen, over je eigen woning beslis je zelf.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="kop"><h2>Ons team</h2><p class="lead">Zij doen het vakwerk; jij beslist mee.</p></div>
+      <div class="team">
+        <article><div class="tl"><img src="img/logo_nga_t.png" alt="NGA architecten" width="276" height="290" style="height:56px;width:auto"></div><p class="label">Architect</p><h3>NGA architecten</h3><p>CPO-specialist, met meer dan 10 CPO-projecten.</p></article>
+        <article><div class="tl"><img src="img/logo_mona_t.png" alt="Atelier MONA" width="437" height="66" style="height:24px;width:auto"></div><p class="label">Ontwerpers</p><h3>Atelier MONA</h3><p>Mede-initiatiefnemer en lid van de groep, met de visie vanuit de buurt.</p></article>
+        <article><div class="tl"></div><p class="label">Onafhankelijk</p><h3>Procesbegeleider</h3><p>Bewaakt het proces en de besluitvorming.</p></article>
+        <article><div class="tl"></div><p class="label">Onafhankelijk</p><h3>Bouwkostendeskundige</h3><p>Bewaakt de begroting.</p></article>
+      </div>
+      <p class="klein" style="margin-top:28px">Later komt er een aannemer in bouwteam bij, met ervaring in CPO en houtbouw. De gemeente toetst het ontwerp.</p>
+    </div>
+  </section>
+
+  <section id="past" class="bos">
+    <div class="wrap">
+      <div class="kop" style="margin-bottom:28px">
+        <p class="label">3 · Wie?</p>
+        <h2>Past dit bij jou?</h2>
+      </div>
+      <ul class="check">
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je wilt hier wonen, met buren die je kent.</li>
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je denkt graag mee over je eigen woning en het gebouw.</li>
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je kunt € 25.000 eigen geld inbrengen en je woning financieren. Die inleg telt mee in je woningprijs.</li>
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je wilt meebeslissen over het gebouw: één stem per huishouden.</li>
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je kunt wachten tot eind 2029 op je sleutel.</li>
+        <li><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--terra)" stroke-width="2.5"/><path d="M10 17.5l5 5 9-10" fill="none" stroke="var(--terra)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Je vindt het fijn om een tuin, dakterras en keuken te delen.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="hoe">
+    <div class="wrap">
+      <div class="kop">
+        <p class="label">4 · Hoe?</p>
         <h2>Bouwen tegen kostprijs.</h2>
       </div>
       <div class="bedragen">
-        <div><b>€ 5.900–6.300</b>per m² GBO, incl. grond en btw</div>
-        <div><b>€ 389.000–416.000</b>voor een woning van 66 m²</div>
+        <div><b>€ 5.500–6.300</b>per m², van casco plus tot afgewerkt, incl. btw over de grond</div>
+        <div><b>€ 220.000–504.000</b>voor een woning van 40 tot 80 m²</div>
         <div><b>€ 25.000</b>inleg, gespreid over 5 termijnen</div>
       </div>
       <details id="bedragen">
         <summary>Wat je betaalt, op een rij</summary>
-        <p class="groepkop">Vooraf, uit eigen geld</p>
-        <div class="rij"><b>€ 1.000</b><p>Entree bij toetreding, eenmalig.</p></div>
-        <div class="rij"><b>€ 25.000–35.000</b><p>5 × € 5.000, van nov 2026 tot jan 2028 (groter dan 80 m²: 5 × € 7.000). Geen extra kosten: een deel van je woningprijs dat je eerder betaalt.</p></div>
-        <div class="rij"><b>tot ca. € 6.700</b><p>Je deel van de waarborgsommen voor de erfpacht, verrekend aan het einde.</p></div>
-        <p class="groepkop">Met je hypotheek, bij de overdracht van de grond</p>
-        <div class="rij"><b>€ 5.900–6.300 per m² GBO</b><p>Totale prijs van je woning, incl. btw over de grond. 66 m² is ca. € 389.000–416.000. Een raming, nog geen koopsom. Gebaseerd op een hoog kwaliteitsniveau, inclusief afbouw op basisniveau. Casco kan ook, tegen een minderprijs (zie hieronder).</p></div>
-        <p class="groepkop">Elk jaar, vanaf de overdracht</p>
-        <div class="rij"><b>€ 62 per m²</b><p>Erfpacht (canon) aan de gemeente. 66 m² is ca. € 4.100 per jaar. Je kunt de erfpacht ook in één keer afkopen.</p></div>
-        <div class="rij"><b>Stap je uit?</b><p>Je inleg krijg je terug zodra er een vervanger voor je instapt.</p></div>
+        <div class="vb">
+          <p>Van €&nbsp;5.500 per m² casco plus tot €&nbsp;6.300 per m² afgewerkt, incl. btw over de grond. De grootte bepaal je zelf; dit zijn voorbeelden. <b>Een raming, nog geen koopsom: de prijs volgt uit de begroting.</b></p>
+          <div class="maten">
+            <div class="maat"><p class="m2">40 m²</p><div class="r"><span>Woningprijs</span><b>€&nbsp;220.000–252.000</b></div><div class="r"><span>Eigen geld vooraf</span><b>€&nbsp;26.000–32.700</b></div><div class="r"><span>Hypotheek</span><b>€&nbsp;195.000–227.000</b></div><div class="r"><span>Erfpacht</span><b>ca.&nbsp;€&nbsp;2.500 per jaar</b></div></div>
+            <div class="maat"><p class="m2">60 m²</p><div class="r"><span>Woningprijs</span><b>€&nbsp;330.000–378.000</b></div><div class="r"><span>Eigen geld vooraf</span><b>€&nbsp;26.000–32.700</b></div><div class="r"><span>Hypotheek</span><b>€&nbsp;305.000–353.000</b></div><div class="r"><span>Erfpacht</span><b>ca.&nbsp;€&nbsp;3.700 per jaar</b></div></div>
+            <div class="maat"><p class="m2">80 m²</p><div class="r"><span>Woningprijs</span><b>€&nbsp;440.000–504.000</b></div><div class="r"><span>Eigen geld vooraf</span><b>€&nbsp;36.000–42.700</b></div><div class="r"><span>Hypotheek</span><b>€&nbsp;405.000–469.000</b></div><div class="r"><span>Erfpacht</span><b>ca.&nbsp;€&nbsp;5.000 per jaar</b></div><div class="r"><span>Als duowoning</span><b class=duo>ca.&nbsp;€&nbsp;220.000–252.000 per persoon</b></div></div>
+          </div>
+          <p><b>Eigen geld vooraf:</b> inleg €&nbsp;25.000 in 5 termijnen (vanaf 80 m²: €&nbsp;35.000, zie <a href="#wanneer">planning</a>), telt mee in je woningprijs. Plus €&nbsp;1.000 entree en tot ca.&nbsp;€&nbsp;6.700 waarborgsom, verrekend aan het einde. <b>Erfpacht:</b> €&nbsp;62 per m² per jaar aan de gemeente. Eeuwigdurend: het bedrag stijgt alleen mee met de inflatie. Afkopen in één keer kan ook.</p>
+          <p class="klein voetnoot">Prijspeil 2027; tot de aanbesteding in 2028 kunnen de bedragen nog meestijgen met de bouwkosten en de inflatie. Voor woningen kleiner dan 60 m² kan de prijs per m² iets hoger uitvallen. De ondergrens is casco plus, de bovengrens een afgewerkte woning (zie hieronder). Maandlasten: vraag een hypotheekadviseur.</p>
+          <p><b>Stap je uit?</b> Je inleg krijg je terug als er een vervanger instapt. Tot dan betaal je je deel van de kosten.</p>
+        </div>
       </details>
 
       <details id="kwaliteit">
-        <summary>Hoog kwaliteitsniveau: wat betekent dat?</summary>
-        <p style="margin-bottom:12px">Hoog niveau betekent prestatie, geen luxe. We investeren in wat je later niet meer kunt veranderen. Wat je zelf kunt vervangen, kies je zelf.</p>
-        <div class="kw">
-          <div><p class="groepkop">Samen, op hoog niveau</p><ul><li>Houten draagconstructie</li><li>Gevel, kozijnen en beglazing</li><li>Isolatie en kierdichting</li><li>Geluidsisolatie tussen de woningen, met marge boven de wettelijke eis</li><li>Verdiepingshoogte en daglicht</li><li>Veranda’s en gedeelde ruimtes</li></ul></div>
-          <div><p class="groepkop">Zelf, op basisniveau met keuzevrijheid</p><ul><li>Keuken en badkamer</li><li>Vloeren, binnendeuren en kasten</li><li>Wandafwerking</li></ul></div>
+        <summary>Wat zit er in de prijs?</summary>
+        <p style="margin-bottom:12px">Het hoge kwaliteitsniveau zit in het gebouw zelf: wat je later niet meer kunt veranderen. De afwerking kies je zelf.</p>
+        <div class="lagen">
+          <div class="laag laag-basis"><p class="label">in beide prijzen</p><h3>Altijd, voor iedereen</h3><ul><li>Houten draagconstructie</li><li>Gevel, kozijnen en beglazing</li><li>Isolatie en kierdichting</li><li>Geluidsisolatie tussen de woningen, met marge boven de wettelijke eis</li><li>Verdiepingshoogte en daglicht</li><li>Veranda’s en gedeelde ruimtes</li></ul></div>
+          <div class="laag"><p class="label">vanaf ca. € 5.500 per m²</p><h3>Casco plus</h3><ul><li>Zonder keuken, badkamer, vloeren, binnendeuren en wandafwerking</li><li>Die maak je zelf af, wanneer en hoe je wilt</li></ul></div>
+          <div class="laag"><p class="label">tot ca. € 6.300 per m²</p><h3>Afgewerkt</h3><ul><li>Keuken en badkamer</li><li>Vloeren, binnendeuren en kasten</li><li>Wandafwerking</li><li>Op basisniveau, met keuzevrijheid</li></ul></div>
         </div>
-        <p style="margin-top:8px;border-left:4px solid var(--terra);padding-left:14px"><b>Losse optie: casco-oplevering.</b> Je neemt je woning af zonder keuken, badkamer en afwerking, en werkt hem zelf af. Daar staat een minderprijs tegenover. Hoe hoog die is, volgt uit de begroting.</p>
-<p style="margin-block:12px 16px"><b>De toets per onderdeel: kun je het over tien jaar zelf nog veranderen? Dan is het jouw keuze.</b> Dit is het uitgangspunt waarop de raming is gebaseerd. Wat precies onder ‘samen’ en ‘zelf’ valt, bepalen we in de ontwerpfase samen met de nieuwe leden.</p>
+        <p class="klein" style="margin-block:12px 16px">De toets per onderdeel: kun je het over tien jaar zelf nog veranderen? Dan is het jouw keuze. Wat precies in casco plus zit, werken we uit in de ontwerpfase.</p>
       </details>
 
-      <h3 style="margin-top:72px;font-size:clamp(1.5rem,2.6vw,2rem)">Eind 2029 de sleutel in handen</h3>
-      <ol class="tijdlijn">
-        <li><span class="wanneer">Najaar 2026</span><h3>Start</h3><p>16 nov: vereniging<br>30 nov: optie op de grond</p></li>
-        <li><span class="wanneer">1e helft 2027</span><h3>Voorlopig Ontwerp</h3><p>8 jun: VO indienen</p></li>
-        <li><span class="wanneer">2e helft 2027</span><h3>Definitief Ontwerp</h3><p>14 sep: DO indienen<br>30 nov: erfpacht</p></li>
-        <li><span class="wanneer">2028</span><h3>Vergunning</h3><p>31 jan: aanvragen<br>1 aug: grond overgedragen</p></li>
-        <li><span class="wanneer">Dec 2028 – 2029</span><h3>Bouw</h3><p>1 dec 2028: start<br>± dec 2029: sleutel</p></li>
-      </ol>
-      <p class="klein" style="margin-top:20px">De data volgen de planning van de gemeente en kunnen nog verschuiven.</p>
     </div>
   </section>
+
+  <section id="wanneer" style="padding-top:0">
+    <div class="wrap">
+      <div class="kop">
+        <p class="label">5 · Wanneer?</p>
+        <h2>Eind 2029 de sleutel in handen</h2>
+      </div>
+      <div class="gedaan"><p><span class="vink" aria-hidden="true">&#10003;</span>Beoordeeld en gekozen door de gemeente voor kavel A2 (juni 2026)</p><p><span class="vink" aria-hidden="true">&#10003;</span>Plan van aanpak goedgekeurd (najaar 2026)</p></div>
+      <ol class="tijdlijn">
+        <li><span class="wanneer">Nu · najaar 2026</span><h3>Start</h3><p>16 nov: vereniging<br>30 nov: grond gereserveerd</p><p class="betaal"><span>Je betaalt</span>€&nbsp;1.000 entree (16&nbsp;nov)<br>deel waarborgsom&nbsp;1 (30&nbsp;nov)</p></li>
+        <li><span class="wanneer">1e helft 2027</span><h3>Voorlopig Ontwerp</h3><p>8 jun: naar de gemeente</p><p class="betaal"><span>Je betaalt</span>1e termijn €&nbsp;5.000 (1&nbsp;feb)<br>2e termijn (1&nbsp;apr)<br>3e termijn (1&nbsp;jun)</p></li>
+        <li><span class="wanneer">2e helft 2027</span><h3>Definitief Ontwerp</h3><p>14 sep: naar de gemeente<br>30 nov: erfpacht rond</p><p class="betaal"><span>Je betaalt</span>4e termijn (1&nbsp;sep)<br>5e termijn (1&nbsp;nov)<br>deel waarborgsom&nbsp;2 (dec)</p></li>
+        <li><span class="wanneer">2028</span><h3>Vergunning</h3><p>31 jan: aanvragen<br>1 aug: grond overgedragen</p><p class="betaal"><span>Je betaalt</span>hypotheek bij overdracht</p></li>
+        <li><span class="wanneer">Dec 2028 – 2029</span><h3>Bouw</h3><p>1 dec 2028: start<br>± dec 2029: sleutel</p><p class="betaal"><span>Je betaalt</span>erfpacht, elk jaar</p></li>
+      </ol>
+      <p class="klein" style="margin-top:20px">Een termijn is €&nbsp;5.000 (vanaf 80 m²: €&nbsp;7.000). Stap je later in? Dan betaal je de gemiste termijnen bij instap. De data volgen de planning van de gemeente en kunnen nog verschuiven.</p>
+    </div>
+  </section>
+
 
   <section id="doemee" class="bos mee">
     <div class="wrap">
       <div class="tekst">
         <p class="label">Doe je mee?</p>
         <h2>We zoeken nog leden.</h2>
-        <p class="lead">Een veranda op het park, in de avondzon. Mail ons voor een kennismaking.</p>
+        <p class="lead">Hoe eerder je instapt, hoe meer je kiest. Mail ons voor een kennismaking.</p>
         <div class="adres">
           <code id="mail">sosolobicpo@gmail.com</code>
           <button class="knop" id="kopieer" type="button">Kopieer adres</button>
