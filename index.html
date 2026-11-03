@@ -1,4 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CPO SoSo Lobi: negen houten woningen aan het Nelson Mandelapark in Amsterdam Zuidoost, zelf ingedeeld en samen gebouwd. We zoeken nog leden.">
+<link rel="icon" href="img/logo_light.png">
 <title>SoSo Lobi aan het park</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +80,7 @@ section{padding-block:clamp(56px,9vw,112px)}
 .wolken{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:36px}
 .wolk{position:relative;background:var(--wit);border:2px solid var(--inkt);border-radius:18px;padding:14px 16px;color:var(--inkt);font-size:.95rem;line-height:1.4}
 .wolk::after{content:"";position:absolute;bottom:-11px;left:var(--staart,50%);width:18px;height:18px;background:var(--wit);border-right:2px solid var(--inkt);border-bottom:2px solid var(--inkt);transform:translateX(-50%) rotate(45deg)}
-.groep{margin:28px auto 0;width:min(820px,100%)}
+.groep{margin:56px auto 0;width:min(880px,92%);height:auto}
 @media (max-width:900px){.wolken{grid-template-columns:repeat(2,minmax(0,1fr))}.wolk::after{display:none}}
 @media (max-width:480px){.wolken{grid-template-columns:1fr}}
 
@@ -174,6 +180,13 @@ summary{cursor:pointer;font-weight:700;color:var(--inkt);padding-block:16px}
 @media (max-width:900px){.tijdlijn{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.tijdlijn{grid-template-columns:1fr}}
 
+/* vragen */
+.faq{max-width:52rem;padding-bottom:18px}
+.faq details{margin:0;background:none;border:0;border-top:1px solid var(--lijn);border-radius:0;padding:0}
+.faq details+details{margin-top:0}
+.faq summary{padding-block:14px}
+.faq details p{padding:0 0 16px;max-width:46rem}
+
 /* doe mee */
 .mee .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
 .mee .tekst{display:flex;flex-direction:column;gap:20px;min-width:0}
@@ -187,12 +200,13 @@ footer{padding-block:40px;border-top:1px solid var(--lijn)}
 footer .wrap{display:flex;flex-direction:column;gap:10px}
 footer p{max-width:62rem}
 </style>
-
+</head>
+<body>
 <header class="balk">
   <div class="wrap">
     <a href="#top" aria-label="Naar boven"><img src="img/logo_light.png" alt="SoSo Lobi"></a>
     <nav aria-label="Hoofdstukken">
-      <a href="#waar">Waar?</a><a href="#wat">Wat?</a><a href="#wensen">Wie?</a><a href="#hoe">Hoe?</a><a href="#wanneer">Wanneer?</a>
+      <a href="#waar">Waar?</a><a href="#wat">Wat?</a><a href="#wensen">Wie?</a><a href="#hoe">Hoe?</a><a href="#wanneer">Wanneer?</a><a href="#vragen">Vragen</a>
     </nav>
     <a class="knop" href="#doemee">Doe mee</a>
   </div>
@@ -227,7 +241,8 @@ footer p{max-width:62rem}
           <p class="label">1 · Waar?</p>
           <h2>Het park is je voortuin</h2>
           <p class="lead">Kavel A2 (rood) ligt direct aan het Nelson Mandelapark, in een buurt die bijna helemaal in hout wordt gebouwd.</p>
-          <p>Amsterdam Zuidoost is volgens bewoners het groenste stadsdeel. Bussen stoppen aan de rand van het park. Trein en metro (Bijlmer ArenA, Kraaiennest, Bullewijk) liggen op ± 6 minuten fietsen. De buurt is autoluw: er komen plekken voor deelauto’s in de buurt en je fiets stal je in het gebouw. Een eigen parkeerplaats krijg je niet.</p>
+          <h3 style="color:var(--perzik);margin-top:6px">De rust van het park, de stad binnen handbereik.</h3>
+          <p>Amsterdam Zuidoost is volgens bewoners het groenste stadsdeel. Bussen stoppen aan de rand van het park. Trein en metro (Bijlmer ArenA, Kraaiennest, Bullewijk) liggen op ± 6 minuten fietsen. Vanaf Bijlmer ArenA ben je zonder overstap in ca. 15 minuten op Schiphol en in ca. 17 minuten in Utrecht Centraal. De buurt is autoluw: er komen plekken voor deelauto’s in de buurt en je fiets stal je in het gebouw. Een eigen parkeerplaats krijg je niet.</p>
           <p class="links"><a href="https://www.google.com/maps?q=52.31555,4.96256">Bekijk de plek op Google Maps →</a><a href="https://www.amsterdam.nl/projecten/bouwprojecten-verkeersprojecten-zuidoost/">Alle bouwprojecten in Zuidoost →</a></p>
         </div>
       </div>
@@ -298,8 +313,8 @@ footer p{max-width:62rem}
         <p class="wolk" style="--staart:30%">“Ik wil een open woning zoals een loft, met zo min mogelijk wanden.”</p>
         <p class="wolk" style="--staart:16%">“Samen met mijn broer een woning, ieder met een eigen deel.”</p>
       </div>
-      <img class="groep" src="img/groep.png" alt="Illustratie van vijf voorbeeldbewoners" width="994" height="414">
-      <p class="klein" style="text-align:center;margin-top:8px">Illustratie: voorbeeldbewoners</p>
+      <img class="groep" src="img/groep.png" alt="Illustratie van negen huishoudens als voorbeeldbewoners" width="1300" height="456">
+      <p class="klein" style="text-align:center;margin-top:24px">Illustratie: voorbeeldbewoners</p>
 
     </div>
   </section>
@@ -370,6 +385,7 @@ footer p{max-width:62rem}
             <div class="maat"><p class="m2">80 m²</p><div class="r"><span>Woningprijs</span><b>€&nbsp;440.000–504.000</b></div><div class="r"><span>Eigen geld vooraf</span><b>€&nbsp;36.000–42.700</b></div><div class="r"><span>Hypotheek</span><b>€&nbsp;405.000–469.000</b></div><div class="r"><span>Erfpacht</span><b>ca.&nbsp;€&nbsp;5.000 per jaar</b></div><div class="r"><span>Als duowoning</span><b class=duo>ca.&nbsp;€&nbsp;220.000–252.000 per persoon</b></div></div>
           </div>
           <p><b>Eigen geld vooraf:</b> inleg €&nbsp;25.000 in 5 termijnen (vanaf 80 m²: €&nbsp;35.000, zie <a href="#wanneer">planning</a>), telt mee in je woningprijs. Plus €&nbsp;1.000 entree en tot ca.&nbsp;€&nbsp;6.700 waarborgsom, verrekend aan het einde. <b>Erfpacht:</b> €&nbsp;62 per m² per jaar aan de gemeente. Eeuwigdurend: het bedrag stijgt alleen mee met de inflatie. Afkopen in één keer kan ook.</p>
+          <p><b>Hypotheek:</b> elk lid sluit een eigen hypotheek af. Dat kan pas als er een vergunning is. Laat daarom vooraf een gratis oriëntatiegesprek doen bij een bank of hypotheekadviseur, dan weet je of het bij je past. Hoe een hypotheek bij CPO werkt, lees je bijvoorbeeld bij <a href="https://www.rabobank.nl/particulieren/hypotheek/samen-zelfbouwen/traject-wooncollectief-cpo">Rabobank</a> of <a href="https://www.triodos.nl/hypotheken/cpo">Triodos</a>. Sommige banken geven rentekorting voor zeer zuinige of biobased woningen.</p>
           <p class="klein voetnoot">Prijspeil 2027; tot de aanbesteding in 2028 kunnen de bedragen nog meestijgen met de bouwkosten en de inflatie. Voor woningen kleiner dan 60 m² kan de prijs per m² iets hoger uitvallen. De ondergrens is casco plus, de bovengrens een afgewerkte woning (zie hieronder). Maandlasten: vraag een hypotheekadviseur.</p>
           <p><b>Stap je uit?</b> Je inleg krijg je terug als er een vervanger instapt. Tot dan betaal je je deel van de kosten.</p>
         </div>
@@ -408,6 +424,29 @@ footer p{max-width:62rem}
   </section>
 
 
+  <section id="vragen" style="padding-top:0">
+    <div class="wrap">
+      <div class="kop">
+        <h2>Nog vragen?</h2>
+      </div>
+      <details class="faqs"><summary>Bekijk de veelgestelde vragen</summary>
+      <div class="faq">
+        <details><summary>Wat is CPO?</summary><p>Je bouwt samen met de andere bewoners je eigen woongebouw, zonder projectontwikkelaar. De vereniging is opdrachtgever. NGA architecten en Atelier MONA ontwerpen en begeleiden.</p></details>
+        <details><summary>Wat is het verschil met een nieuwbouwwoning kopen?</summary><p>Je beslist mee over het gebouw en je eigen woning. Je betaalt wat het werkelijk kost, zonder winst voor een ontwikkelaar. De prijs staat daarom niet vooraf vast.</p></details>
+        <details><summary>Hoe ziet het traject eruit?</summary><p>Optie op de kavel: november 2026. Ontwerp: 2027. Vergunning: 2028. Bouw: 2028–2029. Oplevering: eind 2029.</p></details>
+        <details><summary>Hoe word ik lid?</summary><p>Na een kennismakingsgesprek volgen een financiële check en het toetredingsformulier. Bij instap betaal je €&nbsp;1.000 entree.</p></details>
+        <details><summary>Wat betaal ik wanneer?</summary><p>Bij instap €&nbsp;1.000. In 2027 je inleg van €&nbsp;25.000 (vanaf 80&nbsp;m² €&nbsp;35.000), in termijnen. De rest betaal je met je hypotheek bij de grondoverdracht in 2028.</p></details>
+        <details><summary>Wanneer weet ik wat mijn woning kost?</summary><p>Nu is er een raming. Die wordt per ontwerpfase preciezer, en na elke fase besluiten we samen of we verdergaan. De prijs staat vast bij het contract met de aannemer in 2028.</p></details>
+        <details><summary>Wat beslis ik zelf?</summary><p>Over het gebouw beslissen we samen, met één stem per huishouden. Over de indeling en afwerking van je woning beslis je zelf.</p></details>
+        <details><summary>Hoeveel tijd kost het?</summary><p>Gemiddeld één avond per maand. In de ontwerpfase (2027) soms meer, tijdens de bouw minder.</p></details>
+        <details><summary>Wat als ik wil stoppen?</summary><p>Dat kan. Je krijgt je inleg terug zodra een nieuw lid je plek overneemt. Die vervanger zoeken we samen: we houden een wachtlijst bij en werven actief. Zonder vervanger blijft je inleg in het project.</p></details>
+        <details><summary>Wat als ik later instap?</summary><p>Dat kan zolang er plek is. Je betaalt dan de gemiste termijnen bij instap en kiest uit de woningen die nog vrij zijn. Hoe eerder je instapt, hoe meer keuze.</p></details>
+      <p class="klein" style="border-top:1px solid var(--lijn);padding-top:14px">Laatst bijgewerkt: 1 november 2026.</p>
+      </div>
+      </details>
+    </div>
+  </section>
+
   <section id="doemee" class="bos mee">
     <div class="wrap">
       <div class="tekst">
@@ -442,5 +481,5 @@ document.getElementById('kopieer').addEventListener('click', function(){
   }catch(e){selecteer();}
 });
 </script>
-
-</body></html>
+</body>
+</html>
